@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input slider</title>
+    <style>
+        #holder {
+            width: 720px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="slider">-360°<input id="slide" type="range" min="-360" max="360"  oninput="rotate(this.value)"/>360°
+    </div>
+    <br>
+    <div id="holder">
+        <img src="img/spaceinvaders.jpg" id="target">
+    </div>
+    
+    <script>
+        function rotate(value) { document.getElementById('target').style.transform="rotate("+value+"deg)";
+        }     
+    </script>
+    
+</body>
+</html>
